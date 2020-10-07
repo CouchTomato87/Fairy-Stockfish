@@ -47,7 +47,7 @@ namespace UCI {
 std::set<string> standard_variants = {
     "normal", "nocastle", "fischerandom", "knightmate", "3check", "makruk", "shatranj",
     "asean", "seirawan", "crazyhouse", "bughouse", "suicide", "giveaway", "losers",
-    "capablanca", "gothic", "janus", "caparandom", "grand", "shogi", "xiangqi"
+    "capablanca", "gothic", "janus", "caparandom", "grand", "shogi", "xiangqi", "janggi"
 };
 
 /// 'On change' actions, triggered by an option's value change
