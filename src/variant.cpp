@@ -942,7 +942,7 @@ namespace {
         Variant* v = janggi_variant();
         v->bikjangRule = false;
         v->materialCounting = JANGGI_MATERIAL;
-        v->nFoldValue = -VALUE_MATE;
+        v->moveRepetitionIllegal = true;
         return v;
     }
     // Casual rules of Janggi, where bikjang and material counting are not considered

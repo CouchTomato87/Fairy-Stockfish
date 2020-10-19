@@ -1198,6 +1198,7 @@ void Position::do_move(Move m, StateInfo& newSt, bool givesCheck) {
   std::memcpy(static_cast<void*>(&newSt), static_cast<void*>(st), offsetof(StateInfo, key));
   newSt.previous = st;
   st = &newSt;
+  st->move = m;
 
   // Increment ply counters. In particular, rule50 will be reset to zero later on
   // in case of a capture or a pawn move.
@@ -1985,9 +1986,22 @@ bool Position::is_optional_game_end(Value& result, int ply, int countStarted) co
           int cnt = 0;
           bool perpetualThem = st->checkersBB && stp->checkersBB;
           bool perpetualUs = st->previous->checkersBB && stp->previous->checkersBB;
+          bool moveRepetition = reverse_move(st->move) == stp->move;
 
           for (int i = 4; i <= end; i += 2)
           {
+              // Janggi chasing rules
+              if (i < (n_fold_rule() + 1) * 2)
+                  moveRepetition &= reverse_move(stp->move) == stp->previous->previous->move;
+              else
+              {
+                  moveRepetition &= from_sq(stp->move) == to_sq(stp->previous->previous->move);
+                  if (var->moveRepetitionIllegal && moveRepetition)
+                  {
+                      result = VALUE_MATE;
+                      return true;
+                  }
+              }
               stp = stp->previous->previous;
               perpetualThem &= bool(stp->checkersBB);
 
@@ -2144,7 +2158,7 @@ bool Position::has_game_cycle(int ply) const {
 
   int end = captures_to_hand() ? st->pliesFromNull : std::min(st->rule50, st->pliesFromNull);
 
-  if (end < 3 || var->nFoldValue != VALUE_DRAW || var->perpetualCheckIllegal || var->materialCounting)
+  if (end < 3 || var->nFoldValue != VALUE_DRAW || var->perpetualCheckIllegal || var->materialCounting || var->moveRepetitionIllegal)
     return false;
 
   Key originalKey = st->key;
