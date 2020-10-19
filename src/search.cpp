@@ -879,7 +879,7 @@ namespace {
 
     // Step 8. Futility pruning: child node (~50 Elo)
     if (   !PvNode
-        &&  depth < 8
+        &&  depth < 6
         && !(   pos.extinction_value() == -VALUE_MATE
              && pos.extinction_piece_types().find(ALL_PIECES) == pos.extinction_piece_types().end())
         && !(pos.capture_the_flag_piece() && !pos.checking_permitted())
