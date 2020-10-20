@@ -239,7 +239,7 @@ namespace {
   }
   PieceInfo* quekni_piece() {
       PieceInfo* p = knight_piece();
-      p->name = "querkni";
+      p->name = "quekni";
       p->betza = "mBRcR";
       PieceInfo* p2 = quiet_queen_piece();
       p->merge(p2);
