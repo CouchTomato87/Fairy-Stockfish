@@ -243,6 +243,7 @@ namespace {
       p->betza = "mBRcR";
       PieceInfo* p2 = quiet_queen_piece();
       p->merge(p2);
+      p->stepsQuiet = {};
       delete p2;
       return p;
   }
