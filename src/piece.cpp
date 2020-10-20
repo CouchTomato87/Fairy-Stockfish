@@ -223,44 +223,36 @@ namespace {
       PieceInfo* p = rook_piece();
       p->name = "queroo";
       p->betza = "RmB";
-      PieceInfo* p2 = queen_piece();
+      PieceInfo* p2 = quiet_queen_piece();
       p->merge(p2);
       delete p2;
-      p->stepsQuiet = {};
-      p->sliderCapture = {};
       return p;
   }
   PieceInfo* quebis_piece() {
       PieceInfo* p = bishop_piece();
       p->name = "quebis";
       p->betza = "BmR";
-      PieceInfo* p2 = queen_piece();
+      PieceInfo* p2 = quiet_queen_piece();
       p->merge(p2);
       delete p2;
-      p->stepsQuiet = {};
-      p->sliderCapture = {};
       return p;
   }
   PieceInfo* quekni_piece() {
       PieceInfo* p = knight_piece();
       p->name = "querkni";
       p->betza = "mBRcR";
-      PieceInfo* p2 = queen_piece();
+      PieceInfo* p2 = quiet_queen_piece();
       p->merge(p2);
       delete p2;
-      p->stepsQuiet = {};
-      p->sliderCapture = {};
       return p;
   }
   PieceInfo* queking_piece() {
       PieceInfo* p = commoner_piece();
       p->name = "queking";
       p->betza = "mBRcK";
-      PieceInfo* p2 = queen_piece();
+      PieceInfo* p2 = quiet_queen_piece();
       p->merge(p2);
       delete p2;
-      p->stepsQuiet = {};
-      p->sliderCapture = {};
       return p;
   }
   PieceInfo* shogi_pawn_piece() {
