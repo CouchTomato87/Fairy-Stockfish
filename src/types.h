@@ -341,7 +341,7 @@ enum Value : int {
   KnirooValueMg            = 1050,  KnirooValueEg            = 1250,
   RookniValueMg            = 800,   RookniValueEg            = 950,
   QuerooValueMg            = 1375,  QuerooValueEg            = 1480,
-  QuebisValueMg            = 1100,  QuebisValueEg            = 1300,
+  QuebisValueMg            = 1100,  QuebisValueEg            = 1350,
   QuekniValueMg            = 750,   QuekniValueEg            = 1000,
   QuekingValueMg           = 900,   QuekingValueEg           = 1150,
   ShogiPawnValueMg         =  90,   ShogiPawnValueEg         = 100,
@@ -375,7 +375,7 @@ constexpr int PIECE_TYPE_BITS = 6; // PIECE_TYPE_NB = pow(2, PIECE_TYPE_BITS)
 enum PieceType {
   NO_PIECE_TYPE, PAWN, KNIGHT, BISHOP, ROOK, QUEEN,
   FERS, MET = FERS, ALFIL, FERS_ALFIL, SILVER, KHON = SILVER, AIWOK, BERS, DRAGON = BERS,
-  ARCHBISHOP, CHANCELLOR, AMAZON, KNIBIS, BISKNI, KNIROO, ROOKNI,
+  ARCHBISHOP, CHANCELLOR, AMAZON, KNIBIS, BISKNI, KNIROO, ROOKNI, QUEROO, QUEBIS, QUEKNI, QUEKING,
   SHOGI_PAWN, LANCE, SHOGI_KNIGHT, EUROSHOGI_KNIGHT, GOLD, DRAGON_HORSE,
   CLOBBER_PIECE, BREAKTHROUGH_PIECE, IMMOBILE_PIECE, ATAXX_PIECE, QUIET_QUEEN, CANNON, JANGGI_CANNON,
   SOLDIER, HORSE, ELEPHANT, JANGGI_ELEPHANT, BANNER,
