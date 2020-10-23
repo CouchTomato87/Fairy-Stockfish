@@ -343,7 +343,7 @@ enum Value : int {
   QuerooValueMg            = 1375,  QuerooValueEg            = 1480,
   QuebisValueMg            = 1100,  QuebisValueEg            = 1300,
   QuekniValueMg            = 850,   QuekniValueEg            = 1025,
-  QuekingValueMg           = 900,   QuekingValueEg           = 1150,
+  QuekingValueMg           = 930,   QuekingValueEg           = 1150,
   ShogiPawnValueMg         =  90,   ShogiPawnValueEg         = 100,
   LanceValueMg             = 360,   LanceValueEg             = 250,
   ShogiKnightValueMg       = 360,   ShogiKnightValueEg       = 300,
