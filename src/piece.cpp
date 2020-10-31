@@ -437,6 +437,10 @@ void PieceMap::init() {
   add(BISKNI, biskni_piece());
   add(KNIROO, kniroo_piece());
   add(ROOKNI, rookni_piece());
+  add(QUEROO, queroo_piece());
+  add(QUEBIS, quebis_piece());
+  add(QUEKNI, quekni_piece());
+  add(QUEKING, queking_piece());
   add(SHOGI_PAWN, shogi_pawn_piece());
   add(LANCE, lance_piece());
   add(SHOGI_KNIGHT, shogi_knight_piece());
